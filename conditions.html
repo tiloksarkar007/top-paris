@@ -1,199 +1,581 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conditions d'Utilisation - Top Paris Sportifs</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🏇</text></svg>">
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conditions d'Utilisation - Top Paris Sportifs</title>
+        <link rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🏇</text></svg>">
+        <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Georgia, 'Times New Roman', serif; color: #2d2d2d; background: #f9f6f2; line-height: 1.7; }
-        .warning-strip { background: #8b4513; color: white; text-align: center; padding: 12px; font-size: 13px; font-weight: 600; }
-        .site-header { background: linear-gradient(to right, #2c1810 0%, #4a2c1a 100%); color: white; padding: 25px 0; }
-        .header-content { max-width: 1400px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; }
-        .brand-logo { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
-        .brand-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #f39c12 0%, #d68910 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 35px; }
-        .brand-name { font-size: 26px; font-weight: bold; }
-        .age-label { background: #c0392b; padding: 12px 22px; border-radius: 8px; font-size: 22px; font-weight: bold; border: 3px solid white; }
-        .page-header { background: linear-gradient(135deg, #8b4513 0%, #6b3410 100%); color: white; padding: 60px 30px; text-align: center; }
-        .page-header h1 { font-size: 44px; margin-bottom: 10px; }
-        .container { max-width: 1000px; margin: 40px auto; padding: 40px; background: white; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); }
-        .container h2 { color: #8b4513; font-size: 30px; margin: 30px 0 15px; border-bottom: 3px solid #8b4513; padding-bottom: 10px; }
-        .container h3 { color: #6b3410; font-size: 24px; margin: 20px 0 10px; }
-        .container p { margin-bottom: 15px; color: #555; }
-        .container ul, .container ol { margin: 15px 0 15px 30px; color: #555; }
-        .container li { margin-bottom: 10px; }
-        footer { background: #2c1810; color: white; padding: 40px 30px; margin-top: 50px; text-align: center; }
-        footer a { color: #f39c12; text-decoration: none; }
-    </style>
-</head>
-<body>
-    <div class="warning-strip">⚠️ JOUER COMPORTE DES RISQUES: ENDETTEMENT, ISOLEMENT, DÉPENDANCE. POUR ÊTRE AIDÉ, APPELEZ LE 09 74 75 13 13</div>
-    <header class="site-header">
-        <div class="header-content">
-            <a href="index.html" class="brand-logo">
-                <div class="brand-icon">🏇</div>
-                <div class="brand-name">Top Paris Sportifs</div>
-            </a>
-            <div class="age-label">18+</div>
+
+        body { 
+            font-family: Georgia, 'Times New Roman', serif; 
+            color: #2d2d2d; 
+            background: #f9f6f2; 
+            line-height: 1.7; 
+        }
+
+        .warning-strip { 
+            background: #8b4513; 
+            color: white; 
+            text-align: center; 
+            padding: 12px; 
+            font-size: 13px; 
+            font-weight: 600; 
+        }
+
+        .site-header { 
+            background: linear-gradient(to right, #2c1810 0%, #4a2c1a 100%); 
+            color: white; 
+            padding: 25px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-content { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: relative;
+        }
+
+        .brand-logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            text-decoration: none; 
+            color: white; 
+        }
+
+        .brand-icon { 
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #f39c12 0%, #d68910 100%); 
+            border-radius: 10px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 35px; 
+        }
+
+        .brand-name { 
+            font-size: 26px; 
+            font-weight: bold; 
+        }
+
+        .age-label {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .age-label img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .page-header { 
+            background: linear-gradient(135deg, #8b4513 0%, #6b3410 100%); 
+            color: white; 
+            padding: 60px 30px; 
+            text-align: center; 
+        }
+
+        .page-header h1 { 
+            font-size: 44px; 
+            margin-bottom: 10px; 
+        }
+
+        .container { 
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .container h2 { 
+            color: #8b4513; 
+            font-size: 30px; 
+            margin: 30px 0 15px; 
+            border-bottom: 3px solid #8b4513; 
+            padding-bottom: 10px; 
+        }
+
+        .container h3 { 
+            color: #6b3410; 
+            font-size: 24px; 
+            margin: 20px 0 10px; 
+        }
+
+        .container p { 
+            margin-bottom: 15px; 
+            color: #555; 
+        }
+
+        .container ul, 
+        .container ol { 
+            margin: 15px 0 15px 30px; 
+            color: #555; 
+        }
+
+        .container li { 
+            margin-bottom: 10px; 
+        }
+
+        .container > p {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .operator-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: #f8f9fa;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .operator-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        /* Footer */
+        footer { 
+            background: #2c1810; 
+            color: white; 
+            padding: 50px 30px 25px; 
+            margin-top: 60px;
+        }
+
+        footer a { 
+            color: #f39c12; 
+            text-decoration: none; 
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10rem;
+        }
+
+        .footer-logo img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        .footer-logo a {
+            display: block;
+        }
+
+        .footer-grid {
+            max-width: 1400px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-col h4 {
+            color: #f39c12;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+            color: #999;
+            font-size: 14px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="warning-strip">⚠️ JOUER COMPORTE DES RISQUES: ENDETTEMENT,
+            ISOLEMENT, DÉPENDANCE. POUR ÊTRE AIDÉ, APPELEZ LE 09 74 75 13
+            13</div>
+        <!-- <header class="site-header">
+            <div class="header-content">
+                <a href="index.html" class="brand-logo">
+                    <div class="brand-icon">🏇</div>
+                    <div class="brand-name">Top Paris Sportifs</div>
+                </a>
+                <div class="age-label">18+</div>
+            </div>
+        </header> -->
+
+        <header class="site-header">
+            <div class="header-content">
+                <a href="index.html" class="brand-logo">
+                    <div class="brand-icon">🏇</div>
+                    <div class="brand-name">Top Paris Sportifs</div>
+                </a>
+                <div class="age-label">
+                    <img src="./images/brand/18+ logo.png" alt="18+"
+                        style="width: 60px; height: 60px; border-radius: 50%;">
+                </div>
+            </div>
+        </header>
+
+        <div class="page-header">
+            <h1>Conditions d'Utilisation</h1>
+            <p>Mise à jour: 16 octobre 2025</p>
         </div>
-    </header>
 
-    <div class="page-header">
-        <h1>Conditions d'Utilisation</h1>
-        <p>Mise à jour: 16 octobre 2025</p>
-    </div>
+        <div class="container">
+            <h2>1. Objet et Portée</h2>
+            <p>Les présentes conditions générales d'utilisation régissent
+                l'accès et l'utilisation du site Top-Paris-Sportifs.com. En
+                naviguant sur notre plateforme, vous reconnaissez avoir pris
+                connaissance de ces conditions et vous engagez à les respecter
+                dans leur intégralité.</p>
 
-    <div class="container">
-        <h2>1. Objet et Portée</h2>
-        <p>Les présentes conditions générales d'utilisation régissent l'accès et l'utilisation du site Top-Paris-Sportifs.com. En naviguant sur notre plateforme, vous reconnaissez avoir pris connaissance de ces conditions et vous engagez à les respecter dans leur intégralité.</p>
+            <h2>2. Présentation du Service</h2>
+            <p>Top-Paris-Sportifs.com est une plateforme de comparaison et
+                d'information dédiée aux paris sportifs et hippiques en France.
+                Notre mission principale consiste à:</p>
+            <ul>
+                <li>Présenter les différents opérateurs de paris agréés par
+                    l'ANJ</li>
+                <li>Comparer les offres, bonus et conditions proposés</li>
+                <li>Informer sur les courses hippiques et événements
+                    sportifs</li>
+                <li>Promouvoir une pratique responsable des paris</li>
+            </ul>
+            <p><strong>Important:</strong> Nous ne sommes pas un bookmaker ni un
+                opérateur de jeux d'argent. Nous ne collectons pas de paris et
+                ne traitons aucune transaction financière.</p>
 
-        <h2>2. Présentation du Service</h2>
-        <p>Top-Paris-Sportifs.com est une plateforme de comparaison et d'information dédiée aux paris sportifs et hippiques en France. Notre mission principale consiste à:</p>
-        <ul>
-            <li>Présenter les différents opérateurs de paris agréés par l'ANJ</li>
-            <li>Comparer les offres, bonus et conditions proposés</li>
-            <li>Informer sur les courses hippiques et événements sportifs</li>
-            <li>Promouvoir une pratique responsable des paris</li>
-        </ul>
-        <p><strong>Important:</strong> Nous ne sommes pas un bookmaker ni un opérateur de jeux d'argent. Nous ne collectons pas de paris et ne traitons aucune transaction financière.</p>
+            <h2>3. Conditions d'Accès</h2>
+            <h3>3.1 Âge Légal Requis</h3>
+            <p>L'utilisation de Top-Paris-Sportifs.com est exclusivement
+                réservée aux personnes majeures. En accédant au site, vous
+                certifiez avoir au minimum 18 ans révolus. Toute fausse
+                déclaration concernant votre âge peut entraîner des poursuites
+                judiciaires.</p>
 
-        <h2>3. Conditions d'Accès</h2>
-        <h3>3.1 Âge Légal Requis</h3>
-        <p>L'utilisation de Top-Paris-Sportifs.com est exclusivement réservée aux personnes majeures. En accédant au site, vous certifiez avoir au minimum 18 ans révolus. Toute fausse déclaration concernant votre âge peut entraîner des poursuites judiciaires.</p>
+            <h3>3.2 Territoire</h3>
+            <p>Notre service s'adresse principalement aux résidents français.
+                Les informations présentées concernent uniquement les opérateurs
+                autorisés à exercer légalement en France par l'Autorité
+                Nationale des Jeux.</p>
 
-        <h3>3.2 Territoire</h3>
-        <p>Notre service s'adresse principalement aux résidents français. Les informations présentées concernent uniquement les opérateurs autorisés à exercer légalement en France par l'Autorité Nationale des Jeux.</p>
+            <h2>4. Relations avec les Opérateurs Tiers</h2>
+            <p>Top-Paris-Sportifs.com peut entretenir des relations commerciales
+                avec certains opérateurs de paris présentés sur le site dans le
+                cadre de programmes d'affiliation. Ces partenariats nous
+                permettent de:</p>
+            <ul>
+                <li>Maintenir un service gratuit pour nos utilisateurs</li>
+                <li>Actualiser régulièrement nos informations</li>
+                <li>Proposer des offres exclusives négociées</li>
+            </ul>
+            <p>Nos commissions d'affiliation n'influencent pas l'objectivité de
+                nos analyses et comparaisons. Nous maintenons une totale
+                transparence sur nos partenariats commerciaux.</p>
 
-        <h2>4. Relations avec les Opérateurs Tiers</h2>
-        <p>Top-Paris-Sportifs.com peut entretenir des relations commerciales avec certains opérateurs de paris présentés sur le site dans le cadre de programmes d'affiliation. Ces partenariats nous permettent de:</p>
-        <ul>
-            <li>Maintenir un service gratuit pour nos utilisateurs</li>
-            <li>Actualiser régulièrement nos informations</li>
-            <li>Proposer des offres exclusives négociées</li>
-        </ul>
-        <p>Nos commissions d'affiliation n'influencent pas l'objectivité de nos analyses et comparaisons. Nous maintenons une totale transparence sur nos partenariats commerciaux.</p>
+            <h2>5. Propriété Intellectuelle</h2>
+            <p>L'ensemble du contenu présent sur Top-Paris-Sportifs.com est
+                protégé par les droits de propriété intellectuelle. Cela inclut
+                notamment:</p>
+            <ul>
+                <li>Les textes, articles et analyses rédigés par notre
+                    équipe</li>
+                <li>Le design, la charte graphique et l'ergonomie du site</li>
+                <li>Les logos et marques appartenant à
+                    Top-Paris-Sportifs.com</li>
+                <li>La structure et l'organisation des informations</li>
+            </ul>
 
-        <h2>5. Propriété Intellectuelle</h2>
-        <p>L'ensemble du contenu présent sur Top-Paris-Sportifs.com est protégé par les droits de propriété intellectuelle. Cela inclut notamment:</p>
-        <ul>
-            <li>Les textes, articles et analyses rédigés par notre équipe</li>
-            <li>Le design, la charte graphique et l'ergonomie du site</li>
-            <li>Les logos et marques appartenant à Top-Paris-Sportifs.com</li>
-            <li>La structure et l'organisation des informations</li>
-        </ul>
+            <h3>5.1 Restrictions d'Utilisation</h3>
+            <p>Sans autorisation écrite préalable, vous ne pouvez pas:</p>
+            <ol>
+                <li>Reproduire ou copier substantiellement le contenu du
+                    site</li>
+                <li>Distribuer, vendre ou exploiter commercialement nos
+                    contenus</li>
+                <li>Modifier, adapter ou créer des œuvres dérivées</li>
+                <li>Utiliser des robots ou scrapers pour extraire nos
+                    données</li>
+            </ol>
 
-        <h3>5.1 Restrictions d'Utilisation</h3>
-        <p>Sans autorisation écrite préalable, vous ne pouvez pas:</p>
-        <ol>
-            <li>Reproduire ou copier substantiellement le contenu du site</li>
-            <li>Distribuer, vendre ou exploiter commercialement nos contenus</li>
-            <li>Modifier, adapter ou créer des œuvres dérivées</li>
-            <li>Utiliser des robots ou scrapers pour extraire nos données</li>
-        </ol>
+            <h2>6. Informations Publiées</h2>
+            <h3>6.1 Exactitude et Actualisation</h3>
+            <p>Nous accordons une attention particulière à la véracité et à
+                l'actualité des informations diffusées. Néanmoins:</p>
+            <ul>
+                <li>Les bonus et promotions peuvent être modifiés par les
+                    opérateurs sans préavis</li>
+                <li>Les cotes évoluent constamment selon les marchés</li>
+                <li>Des erreurs ou omissions peuvent survenir malgré notre
+                    vigilance</li>
+            </ul>
+            <p>Nous vous recommandons de toujours vérifier les conditions
+                directement auprès de l'opérateur avant de vous inscrire ou de
+                placer un pari.</p>
 
-        <h2>6. Informations Publiées</h2>
-        <h3>6.1 Exactitude et Actualisation</h3>
-        <p>Nous accordons une attention particulière à la véracité et à l'actualité des informations diffusées. Néanmoins:</p>
-        <ul>
-            <li>Les bonus et promotions peuvent être modifiés par les opérateurs sans préavis</li>
-            <li>Les cotes évoluent constamment selon les marchés</li>
-            <li>Des erreurs ou omissions peuvent survenir malgré notre vigilance</li>
-        </ul>
-        <p>Nous vous recommandons de toujours vérifier les conditions directement auprès de l'opérateur avant de vous inscrire ou de placer un pari.</p>
+            <h3>6.2 Responsabilité Éditoriale</h3>
+            <p>Les analyses, opinions et conseils publiés sur
+                Top-Paris-Sportifs.com reflètent le point de vue de leurs
+                auteurs à un instant donné. Ils ne constituent en aucun cas:</p>
+            <ul>
+                <li>Des conseils d'investissement financier</li>
+                <li>Des pronostics garantis ou des prédictions infaillibles</li>
+                <li>Des incitations à parier au-delà de vos moyens</li>
+            </ul>
 
-        <h3>6.2 Responsabilité Éditoriale</h3>
-        <p>Les analyses, opinions et conseils publiés sur Top-Paris-Sportifs.com reflètent le point de vue de leurs auteurs à un instant donné. Ils ne constituent en aucun cas:</p>
-        <ul>
-            <li>Des conseils d'investissement financier</li>
-            <li>Des pronostics garantis ou des prédictions infaillibles</li>
-            <li>Des incitations à parier au-delà de vos moyens</li>
-        </ul>
+            <h2>7. Limitation de Responsabilité</h2>
+            <p>Top-Paris-Sportifs.com décline toute responsabilité
+                concernant:</p>
 
-        <h2>7. Limitation de Responsabilité</h2>
-        <p>Top-Paris-Sportifs.com décline toute responsabilité concernant:</p>
+            <h3>7.1 Relations avec les Opérateurs</h3>
+            <ul>
+                <li>Les litiges entre utilisateurs et opérateurs de paris</li>
+                <li>Les retards de paiement ou refus de retrait</li>
+                <li>La qualité du service client des plateformes tierces</li>
+                <li>Les problèmes techniques rencontrés sur les sites
+                    partenaires</li>
+            </ul>
 
-        <h3>7.1 Relations avec les Opérateurs</h3>
-        <ul>
-            <li>Les litiges entre utilisateurs et opérateurs de paris</li>
-            <li>Les retards de paiement ou refus de retrait</li>
-            <li>La qualité du service client des plateformes tierces</li>
-            <li>Les problèmes techniques rencontrés sur les sites partenaires</li>
-        </ul>
+            <h3>7.2 Résultats de Paris</h3>
+            <ul>
+                <li>Les pertes financières résultant de vos activités de
+                    pari</li>
+                <li>Les décisions prises sur la base de nos informations</li>
+                <li>L'utilisation inappropriée des conseils fournis</li>
+            </ul>
 
-        <h3>7.2 Résultats de Paris</h3>
-        <ul>
-            <li>Les pertes financières résultant de vos activités de pari</li>
-            <li>Les décisions prises sur la base de nos informations</li>
-            <li>L'utilisation inappropriée des conseils fournis</li>
-        </ul>
+            <h2>8. Liens Hypertextes</h2>
+            <p>Notre site contient des liens vers des sites web externes
+                (opérateurs de paris, organismes d'aide, etc.). L'activation de
+                ces liens vous fait quitter Top-Paris-Sportifs.com. Nous ne
+                contrôlons pas ces sites tiers et ne pouvons être tenus
+                responsables de:</p>
+            <ul>
+                <li>Leur contenu et leurs pratiques</li>
+                <li>Leur politique de confidentialité</li>
+                <li>Leur disponibilité ou performance technique</li>
+            </ul>
 
-        <h2>8. Liens Hypertextes</h2>
-        <p>Notre site contient des liens vers des sites web externes (opérateurs de paris, organismes d'aide, etc.). L'activation de ces liens vous fait quitter Top-Paris-Sportifs.com. Nous ne contrôlons pas ces sites tiers et ne pouvons être tenus responsables de:</p>
-        <ul>
-            <li>Leur contenu et leurs pratiques</li>
-            <li>Leur politique de confidentialité</li>
-            <li>Leur disponibilité ou performance technique</li>
-        </ul>
+            <h2>9. Protection des Données</h2>
+            <p>Pour toute information relative à la collecte et au traitement de
+                vos données personnelles, veuillez consulter notre <a
+                    href="politique-confidentialite.html"
+                    style="color: #8b4513; text-decoration: underline;">Politique
+                    de Confidentialité</a>.</p>
 
-        <h2>9. Protection des Données</h2>
-        <p>Pour toute information relative à la collecte et au traitement de vos données personnelles, veuillez consulter notre <a href="politique-confidentialite.html" style="color: #8b4513; text-decoration: underline;">Politique de Confidentialité</a>.</p>
+            <h2>10. Disponibilité du Service</h2>
+            <p>Nous nous efforçons d'assurer l'accessibilité continue de
+                Top-Paris-Sportifs.com. Toutefois, nous nous réservons le droit
+                de:</p>
+            <ul>
+                <li>Suspendre temporairement le service pour maintenance</li>
+                <li>Modifier la structure ou le contenu du site</li>
+                <li>Interrompre définitivement tout ou partie des services</li>
+            </ul>
+            <p>Ces opérations peuvent être effectuées sans préavis ni
+                justification.</p>
 
-        <h2>10. Disponibilité du Service</h2>
-        <p>Nous nous efforçons d'assurer l'accessibilité continue de Top-Paris-Sportifs.com. Toutefois, nous nous réservons le droit de:</p>
-        <ul>
-            <li>Suspendre temporairement le service pour maintenance</li>
-            <li>Modifier la structure ou le contenu du site</li>
-            <li>Interrompre définitivement tout ou partie des services</li>
-        </ul>
-        <p>Ces opérations peuvent être effectuées sans préavis ni justification.</p>
+            <h2>11. Comportement des Utilisateurs</h2>
+            <p>En utilisant notre site, vous vous engagez à:</p>
+            <ul>
+                <li>Fournir des informations exactes et véridiques</li>
+                <li>Ne pas tenter d'accéder à des zones restreintes du site</li>
+                <li>Ne pas perturber le fonctionnement normal de la
+                    plateforme</li>
+                <li>Respecter les droits des autres utilisateurs</li>
+                <li>Ne pas utiliser le site à des fins illégales ou
+                    frauduleuses</li>
+            </ul>
 
-        <h2>11. Comportement des Utilisateurs</h2>
-        <p>En utilisant notre site, vous vous engagez à:</p>
-        <ul>
-            <li>Fournir des informations exactes et véridiques</li>
-            <li>Ne pas tenter d'accéder à des zones restreintes du site</li>
-            <li>Ne pas perturber le fonctionnement normal de la plateforme</li>
-            <li>Respecter les droits des autres utilisateurs</li>
-            <li>Ne pas utiliser le site à des fins illégales ou frauduleuses</li>
-        </ul>
+            <h2>12. Modifications des Conditions</h2>
+            <p>Top-Paris-Sportifs.com se réserve la faculté de modifier les
+                présentes conditions d'utilisation à tout moment. Les
+                modifications prennent effet dès leur publication sur le site.
+                Nous vous invitons à consulter régulièrement cette page pour
+                prendre connaissance des éventuelles évolutions.</p>
+            <p>L'utilisation continue du site après modification vaut
+                acceptation des nouvelles conditions.</p>
 
-        <h2>12. Modifications des Conditions</h2>
-        <p>Top-Paris-Sportifs.com se réserve la faculté de modifier les présentes conditions d'utilisation à tout moment. Les modifications prennent effet dès leur publication sur le site. Nous vous invitons à consulter régulièrement cette page pour prendre connaissance des éventuelles évolutions.</p>
-        <p>L'utilisation continue du site après modification vaut acceptation des nouvelles conditions.</p>
+            <h2>13. Résiliation</h2>
+            <p>Nous nous réservons le droit de restreindre ou de bloquer l'accès
+                au site à tout utilisateur qui:</p>
+            <ul>
+                <li>Viole les présentes conditions d'utilisation</li>
+                <li>Adopte un comportement préjudiciable au site ou à ses
+                    utilisateurs</li>
+                <li>Tente de nuire à la sécurité ou à l'intégrité de la
+                    plateforme</li>
+            </ul>
 
-        <h2>13. Résiliation</h2>
-        <p>Nous nous réservons le droit de restreindre ou de bloquer l'accès au site à tout utilisateur qui:</p>
-        <ul>
-            <li>Viole les présentes conditions d'utilisation</li>
-            <li>Adopte un comportement préjudiciable au site ou à ses utilisateurs</li>
-            <li>Tente de nuire à la sécurité ou à l'intégrité de la plateforme</li>
-        </ul>
+            <h2>14. Droit Applicable et Juridiction</h2>
+            <p>Les présentes conditions d'utilisation sont régies par le droit
+                français. En cas de litige relatif à l'interprétation ou à
+                l'exécution de ces conditions, et à défaut d'accord amiable, les
+                tribunaux français seront seuls compétents.</p>
 
-        <h2>14. Droit Applicable et Juridiction</h2>
-        <p>Les présentes conditions d'utilisation sont régies par le droit français. En cas de litige relatif à l'interprétation ou à l'exécution de ces conditions, et à défaut d'accord amiable, les tribunaux français seront seuls compétents.</p>
+            <h2>15. Nullité Partielle</h2>
+            <p>Si une ou plusieurs stipulations des présentes conditions sont
+                déclarées nulles ou inapplicables, les autres dispositions
+                conserveront leur pleine force et leur plein effet. La
+                disposition invalidée sera remplacée par une disposition valide
+                dont les effets seront les plus proches possible.</p>
 
-        <h2>15. Nullité Partielle</h2>
-        <p>Si une ou plusieurs stipulations des présentes conditions sont déclarées nulles ou inapplicables, les autres dispositions conserveront leur pleine force et leur plein effet. La disposition invalidée sera remplacée par une disposition valide dont les effets seront les plus proches possible.</p>
+            <h2>16. Contact</h2>
+            <p>Pour toute question ou réclamation concernant ces conditions
+                d'utilisation, vous pouvez nous contacter à l'adresse
+                suivante:</p>
+            <p><strong>Email:</strong> contact@top-paris-sportifs.com<br>
+                <strong>Délai de réponse:</strong> Sous 5 jours ouvrés</p>
 
-        <h2>16. Contact</h2>
-        <p>Pour toute question ou réclamation concernant ces conditions d'utilisation, vous pouvez nous contacter à l'adresse suivante:</p>
-        <p><strong>Email:</strong> contact@top-paris-sportifs.com<br>
-        <strong>Délai de réponse:</strong> Sous 5 jours ouvrés</p>
-
-        <div style="margin-top: 40px; padding: 25px; background: #f9f6f2; border-left: 5px solid #8b4513; border-radius: 5px;">
-            <p style="margin: 0; color: #6b3410;"><strong>Rappel Important:</strong> Top-Paris-Sportifs.com est un service d'information et de comparaison. Nous ne sommes pas un opérateur de paris et ne traitons aucune transaction. Pour toute question relative à un compte de jeu ou à des transactions, contactez directement l'opérateur concerné.</p>
+            <div
+                style="margin-top: 40px; padding: 25px; background: #f9f6f2; border-left: 5px solid #8b4513; border-radius: 5px;">
+                <p style="margin: 0; color: #6b3410;"><strong>Rappel
+                        Important:</strong> Top-Paris-Sportifs.com est un
+                    service d'information et de comparaison. Nous ne sommes pas
+                    un opérateur de paris et ne traitons aucune transaction.
+                    Pour toute question relative à un compte de jeu ou à des
+                    transactions, contactez directement l'opérateur
+                    concerné.</p>
+            </div>
         </div>
-    </div>
 
-    <footer>
-        <p>© 2025 Top-Paris-Sportifs.com - Réservé aux 18+</p>
-        <p style="margin-top: 10px;">
-            <a href="index.html">Accueil</a> | 
-            <a href="jeu-responsable.html">Jeu Responsable</a> | 
-            <a href="politique-confidentialite.html">Confidentialité</a> | 
-            <a href="avertissement.html">Avertissement</a>
-        </p>
-    </footer>
-</body>
+        <footer>
+            <div class="container">
+                <div class="footer-logos">
+
+                    <div class="footer-logo" style="background:#fff;"><img
+                            style="max-width: 150px; border-radius: 50%; max-width: 50px;"
+                            src="./images/brand/18+ logo.png" alt="brand"></div>
+                </div>
+                <p style="color: #b8c9d9; margin-top: 15px; font-size: 14px;">Le
+                    Le jeu doit toujours rester un loisir et une source de
+                    divertissement.
+                    Si vous sentez que les jeux d'argent prennent trop de place
+                    dans votre quotidien, il est important d'agir rapidement.
+                    Le jeu excessif peut avoir des conséquences sérieuses sur
+                    votre santé mentale, vos finances et vos relations
+                    personnelles.
+
+                    Si vous ou un proche êtes concernés par une dépendance au
+                    jeu, n'attendez pas pour demander de l'aide.
+                    Des professionnels spécialisés dans le soutien aux joueurs
+                    en difficulté sont disponibles pour vous accompagner de
+                    manière confidentielle et bienveillante.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="jeu-responsable.html">Jeu
+                                Responsable</a></li>
+                        <li><a href="conditions.html">Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a
+                                href="politique-confidentialite.html">Confidentialité</a></li>
+                        <li><a href="avertissement.html">Avertissement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aide</h4>
+                    <ul>
+                        <li><a href="https://www.joueurs-info-service.fr"
+                                target="_blank">Joueurs Info Service</a></li>
+                        <li><a href="https://www.anj.fr"
+                                target="_blank">ANJ</a></li>
+                        <li><a href="https://www.sosjoueurs.org"
+                                target="_blank">SOS Joueurs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partenaires</h4>
+                    <div class="footer-logos-vertical">
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://www.joueurs-info-service.fr/"
+                                target="_blank">
+                                <img src="./images/brand/joueurs-info-logo.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://anj.fr/" target="_blank">
+                                <img src="./images/brand/anj-logo.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://www.gamcare.org.uk/"
+                                target="_blank">
+                                <img style="max-width: 150px;"
+                                    src="./images/brand/gam-care.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Top-Paris-Sportifs.com - 18+</p>
+            </div>
+        </footer>
+    </body>
 </html>

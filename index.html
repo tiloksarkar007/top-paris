@@ -131,7 +131,7 @@
             padding: 25px 0;
             box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
-        
+
         .header-content {
             max-width: 1400px;
             margin: 0 auto;
@@ -139,8 +139,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
-        
+
         .brand-logo {
             display: flex;
             align-items: center;
@@ -148,6 +149,23 @@
             text-decoration: none;
             color: white;
         }
+
+        /* .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        } */
+        
+        /* .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: white;
+        } */
         
         .brand-icon {
             width: 60px;
@@ -165,13 +183,29 @@
             font-weight: bold;
         }
         
-        .age-label {
+        /* .age-label {
             background: #c0392b;
             padding: 12px 22px;
             border-radius: 8px;
             font-size: 22px;
             font-weight: bold;
             border: 3px solid white;
+        } */
+
+        .age-label {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .age-label img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: block;
         }
         
         /* Main Layout - Sidebar + Content */
@@ -460,6 +494,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 10rem;
         }
         
         .footer-logo img {
@@ -543,6 +578,7 @@
             max-width: 100px;
             max-height: 100px;
         }
+
         /* custom added */
     </style>
     </head>
@@ -578,13 +614,26 @@
             POUR ÊTRE AIDÉ, APPELEZ LE 09 74 75 13 13 (APPEL NON SURTAXÉ)
         </div>
 
-        <header class="site-header">
+        <!-- <header class="site-header">
             <div class="header-content">
                 <a href="index.html" class="brand-logo">
                     <div class="brand-icon">🏇</div>
                     <div class="brand-name">Top Paris Sportifs</div>
                 </a>
                 <div class="age-label">18+</div>
+            </div>
+        </header> -->
+
+        <header class="site-header">
+            <div class="header-content">
+                <a href="index.html" class="brand-logo">
+                    <div class="brand-icon">🏇</div>
+                    <div class="brand-name">Top Paris Sportifs</div>
+                </a>
+                <div class="age-label">
+                    <img src="./images/brand/18+ logo.png" alt="18+"
+                        style="width: 60px; height: 60px; border-radius: 50%;">
+                </div>
             </div>
         </header>
 
@@ -763,6 +812,93 @@
         <footer>
             <div class="container">
                 <div class="footer-logos">
+
+                    <div class="footer-logo" style="background:#fff;"><img
+                            style="max-width: 150px; border-radius: 50%; max-width: 50px;"
+                            src="./images/brand/18+ logo.png" alt="brand"></div>
+                </div>
+                <p style="color: #b8c9d9; margin-top: 15px; font-size: 14px;">Le
+                    Le jeu doit toujours rester un loisir et une source de
+                    divertissement.
+                    Si vous sentez que les jeux d'argent prennent trop de place
+                    dans votre quotidien, il est important d'agir rapidement.
+                    Le jeu excessif peut avoir des conséquences sérieuses sur
+                    votre santé mentale, vos finances et vos relations
+                    personnelles.
+
+                    Si vous ou un proche êtes concernés par une dépendance au
+                    jeu, n'attendez pas pour demander de l'aide.
+                    Des professionnels spécialisés dans le soutien aux joueurs
+                    en difficulté sont disponibles pour vous accompagner de
+                    manière confidentielle et bienveillante.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="jeu-responsable.html">Jeu
+                                Responsable</a></li>
+                        <li><a href="conditions.html">Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a
+                                href="politique-confidentialite.html">Confidentialité</a></li>
+                        <li><a href="avertissement.html">Avertissement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aide</h4>
+                    <ul>
+                        <li><a href="https://www.joueurs-info-service.fr"
+                                target="_blank">Joueurs Info Service</a></li>
+                        <li><a href="https://www.anj.fr"
+                                target="_blank">ANJ</a></li>
+                        <li><a href="https://www.sosjoueurs.org"
+                                target="_blank">SOS Joueurs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partenaires</h4>
+                    <div class="footer-logos-vertical">
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://www.joueurs-info-service.fr/"
+                                target="_blank">
+                                <img src="./images/brand/joueurs-info-logo.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://anj.fr/" target="_blank">
+                                <img src="./images/brand/anj-logo.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://www.gamcare.org.uk/"
+                                target="_blank">
+                                <img style="max-width: 150px;"
+                                    src="./images/brand/gam-care.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Top-Paris-Sportifs.com - 18+</p>
+            </div>
+        </footer>
+
+        <!-- <footer>
+            <div class="container">
+                <div class="footer-logos">
                     <div class="footer-logo" style="background:#fff;"><a
                             href="https://www.joueurs-info-service.fr/"
                             target="_blank"> <img
@@ -781,14 +917,20 @@
                             style="max-width: 150px; border-radius: 50%; max-width: 50px;"
                             src="./images/brand/18+ logo.png" alt="brand"></div>
                 </div>
-                <!-- <p>© 2025 Paris Expert Guide. Tous droits réservés.</p> -->
                 <p style="color: #b8c9d9; margin-top: 15px; font-size: 14px;">Le
-                    Le jeu doit toujours rester un loisir et une source de divertissement.
-Si vous sentez que les jeux d’argent prennent trop de place dans votre quotidien, il est important d’agir rapidement.
-Le jeu excessif peut avoir des conséquences sérieuses sur votre santé mentale, vos finances et vos relations personnelles.
+                    Le jeu doit toujours rester un loisir et une source de
+                    divertissement.
+                    Si vous sentez que les jeux d’argent prennent trop de place
+                    dans votre quotidien, il est important d’agir rapidement.
+                    Le jeu excessif peut avoir des conséquences sérieuses sur
+                    votre santé mentale, vos finances et vos relations
+                    personnelles.
 
-Si vous ou un proche êtes concernés par une dépendance au jeu, n’attendez pas pour demander de l’aide.
-Des professionnels spécialisés dans le soutien aux joueurs en difficulté sont disponibles pour vous accompagner de manière confidentielle et bienveillante.</p>
+                    Si vous ou un proche êtes concernés par une dépendance au
+                    jeu, n’attendez pas pour demander de l’aide.
+                    Des professionnels spécialisés dans le soutien aux joueurs
+                    en difficulté sont disponibles pour vous accompagner de
+                    manière confidentielle et bienveillante.</p>
             </div>
             <div class="footer-grid">
                 <div class="footer-col">
@@ -823,7 +965,7 @@ Des professionnels spécialisés dans le soutien aux joueurs en difficulté sont
             <div class="footer-bottom">
                 <p>© 2025 Top-Paris-Sportifs.com - 18+</p>
             </div>
-        </footer>
+        </footer> -->
 
         <script>
         function confirmAge() {

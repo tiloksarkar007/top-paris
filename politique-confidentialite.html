@@ -1,304 +1,753 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité - Top Paris Sportifs</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🏇</text></svg>">
-    <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Politique de Confidentialité - Top Paris Sportifs</title>
+        <link rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>🏇</text></svg>">
+        <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Georgia, 'Times New Roman', serif; color: #2d2d2d; background: #f9f6f2; line-height: 1.7; }
-        .warning-strip { background: #8b4513; color: white; text-align: center; padding: 12px; font-size: 13px; font-weight: 600; }
-        .site-header { background: linear-gradient(to right, #2c1810 0%, #4a2c1a 100%); color: white; padding: 25px 0; }
-        .header-content { max-width: 1400px; margin: 0 auto; padding: 0 30px; display: flex; justify-content: space-between; align-items: center; }
-        .brand-logo { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
-        .brand-icon { width: 60px; height: 60px; background: linear-gradient(135deg, #f39c12 0%, #d68910 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 35px; }
-        .brand-name { font-size: 26px; font-weight: bold; }
-        .age-label { background: #c0392b; padding: 12px 22px; border-radius: 8px; font-size: 22px; font-weight: bold; border: 3px solid white; }
-        .page-header { background: linear-gradient(135deg, #8b4513 0%, #6b3410 100%); color: white; padding: 60px 30px; text-align: center; }
-        .page-header h1 { font-size: 44px; margin-bottom: 10px; }
-        .container { max-width: 1000px; margin: 40px auto; padding: 40px; background: white; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); }
-        .container h2 { color: #8b4513; font-size: 30px; margin: 30px 0 15px; border-bottom: 3px solid #8b4513; padding-bottom: 10px; }
-        .container h3 { color: #6b3410; font-size: 24px; margin: 20px 0 10px; }
-        .container p { margin-bottom: 15px; color: #555; }
-        .container ul { margin: 15px 0 15px 30px; color: #555; }
-        .container li { margin-bottom: 10px; }
-        .info-highlight { background: #fff8f0; padding: 20px; border-left: 5px solid #f39c12; margin: 20px 0; border-radius: 5px; }
-        footer { background: #2c1810; color: white; padding: 40px 30px; margin-top: 50px; text-align: center; }
-        footer a { color: #f39c12; text-decoration: none; }
+
+        body { 
+            font-family: Georgia, 'Times New Roman', serif; 
+            color: #2d2d2d; 
+            background: #f9f6f2; 
+            line-height: 1.7; 
+        }
+
+        .warning-strip { 
+            background: #8b4513; 
+            color: white; 
+            text-align: center; 
+            padding: 12px; 
+            font-size: 13px; 
+            font-weight: 600; 
+        }
+
+        .site-header { 
+            background: linear-gradient(to right, #2c1810 0%, #4a2c1a 100%); 
+            color: white; 
+            padding: 25px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .header-content { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            position: relative;
+        }
+
+        .brand-logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            text-decoration: none; 
+            color: white; 
+        }
+
+        .brand-icon { 
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #f39c12 0%, #d68910 100%); 
+            border-radius: 10px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 35px; 
+        }
+
+        .brand-name { 
+            font-size: 26px; 
+            font-weight: bold; 
+        }
+
+        .age-label {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .age-label img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .page-header { 
+            background: linear-gradient(135deg, #8b4513 0%, #6b3410 100%); 
+            color: white; 
+            padding: 60px 30px; 
+            text-align: center; 
+        }
+
+        .page-header h1 { 
+            font-size: 44px; 
+            margin-bottom: 10px; 
+        }
+
+        .container { 
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .container h2 { 
+            color: #8b4513; 
+            font-size: 30px; 
+            margin: 30px 0 15px; 
+            border-bottom: 3px solid #8b4513; 
+            padding-bottom: 10px; 
+        }
+
+        .container h3 { 
+            color: #6b3410; 
+            font-size: 24px; 
+            margin: 20px 0 10px; 
+        }
+
+        .container p { 
+            margin-bottom: 15px; 
+            color: #555; 
+        }
+
+        .container ul { 
+            margin: 15px 0 15px 30px; 
+            color: #555; 
+        }
+
+        .container li { 
+            margin-bottom: 10px; 
+        }
+
+        .container > p {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .info-highlight { 
+            background: #fff8f0; 
+            padding: 20px; 
+            border-left: 5px solid #f39c12; 
+            margin: 20px 0; 
+            border-radius: 5px; 
+        }
+
+        .operator-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: #f8f9fa;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .operator-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            max-width: 100px;
+            max-height: 100px;
+        }
+
+        /* Footer */
+        footer { 
+            background: #2c1810; 
+            color: white; 
+            padding: 50px 30px 25px; 
+            margin-top: 60px;
+        }
+
+        footer a { 
+            color: #f39c12; 
+            text-decoration: none; 
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10rem;
+        }
+
+        .footer-logo img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        .footer-logo a {
+            display: block;
+        }
+
+        .footer-grid {
+            max-width: 1400px;
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-col h4 {
+            color: #f39c12;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: #f39c12;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+            color: #999;
+            font-size: 14px;
+        }
     </style>
-</head>
-<body>
-    <div class="warning-strip">⚠️ JOUER COMPORTE DES RISQUES: ENDETTEMENT, ISOLEMENT, DÉPENDANCE. POUR ÊTRE AIDÉ, APPELEZ LE 09 74 75 13 13</div>
-    <header class="site-header">
-        <div class="header-content">
-            <a href="index.html" class="brand-logo">
-                <div class="brand-icon">🏇</div>
-                <div class="brand-name">Top Paris Sportifs</div>
-            </a>
-            <div class="age-label">18+</div>
-        </div>
-    </header>
+    </head>
+    <body>
+        <div class="warning-strip">⚠️ JOUER COMPORTE DES RISQUES: ENDETTEMENT,
+            ISOLEMENT, DÉPENDANCE. POUR ÊTRE AIDÉ, APPELEZ LE 09 74 75 13
+            13</div>
+        <!-- <header class="site-header">
+            <div class="header-content">
+                <a href="index.html" class="brand-logo">
+                    <div class="brand-icon">🏇</div>
+                    <div class="brand-name">Top Paris Sportifs</div>
+                </a>
+                <div class="age-label">18+</div>
+            </div>
+        </header> -->
 
-    <div class="page-header">
-        <h1>Politique de Confidentialité</h1>
-        <p>Dernière mise à jour: 16 octobre 2025</p>
-    </div>
+        <header class="site-header">
+            <div class="header-content">
+                <a href="index.html" class="brand-logo">
+                    <div class="brand-icon">🏇</div>
+                    <div class="brand-name">Top Paris Sportifs</div>
+                </a>
+                <div class="age-label">
+                    <img src="./images/brand/18+ logo.png" alt="18+"
+                        style="width: 60px; height: 60px; border-radius: 50%;">
+                </div>
+            </div>
+        </header>
 
-    <div class="container">
-        <p>Top-Paris-Sportifs.com accorde une importance primordiale à la protection de votre vie privée et au respect de vos données personnelles. Cette politique de confidentialité détaille nos pratiques en matière de collecte, d'utilisation et de protection de vos informations, en conformité avec le Règlement Général sur la Protection des Données (RGPD) et la législation française applicable.</p>
-
-        <h2>1. Identité du Responsable de Traitement</h2>
-        <p>Le responsable du traitement des données personnelles collectées sur Top-Paris-Sportifs.com est:</p>
-        <p><strong>Nom du site:</strong> Top-Paris-Sportifs.com<br>
-        <strong>Contact:</strong> privacy@top-paris-sportifs.com</p>
-        <p>Pour toute question relative à cette politique ou à vos données personnelles, vous pouvez nous contacter à l'adresse email ci-dessus.</p>
-
-        <h2>2. Nature des Données Collectées</h2>
-        <p>Top-Paris-Sportifs.com étant un site comparateur indépendant, nous ne collectons que des données limitées nécessaires au fonctionnement du site.</p>
-
-        <h3>2.1 Données de Navigation Automatiques</h3>
-        <p>Lors de votre visite sur notre site, certaines informations techniques sont collectées automatiquement:</p>
-        <ul>
-            <li><strong>Adresse IP:</strong> Collectée de manière anonymisée pour des raisons de sécurité et statistiques</li>
-            <li><strong>Informations sur le navigateur:</strong> Type, version et langue du navigateur utilisé</li>
-            <li><strong>Système d'exploitation:</strong> Type et version de votre système</li>
-            <li><strong>Pages consultées:</strong> URL des pages visitées et ordre de navigation</li>
-            <li><strong>Durée de visite:</strong> Temps passé sur chaque page et sur le site</li>
-            <li><strong>Données de référencement:</strong> Site ou moteur de recherche depuis lequel vous êtes arrivé</li>
-            <li><strong>Localisation géographique:</strong> Pays et région approximatifs (sans précision d'adresse)</li>
-        </ul>
-
-        <h3>2.2 Cookies et Technologies Similaires</h3>
-        <p>Nous utilisons différents types de cookies pour améliorer votre expérience:</p>
-        <ul>
-            <li><strong>Cookies strictement nécessaires:</strong> Essentiels au fonctionnement du site (vérification d'âge, préférences de navigation)</li>
-            <li><strong>Cookies analytiques:</strong> Nous aident à comprendre comment les visiteurs utilisent le site (Google Analytics)</li>
-            <li><strong>Cookies de performance:</strong> Permettent d'améliorer les fonctionnalités du site</li>
-        </ul>
-
-        <div class="info-highlight">
-            <p><strong>📌 Important:</strong> Top-Paris-Sportifs.com ne collecte AUCUNE donnée personnelle sensible. Nous ne demandons jamais de nom, prénom, adresse postale, numéro de téléphone, informations bancaires ou toute autre donnée d'identification directe. Vous n'avez pas besoin de créer de compte pour utiliser notre site.</p>
+        <div class="page-header">
+            <h1>Politique de Confidentialité</h1>
+            <p>Dernière mise à jour: 16 octobre 2025</p>
         </div>
 
-        <h2>3. Finalités du Traitement</h2>
-        <p>Les données collectées sont utilisées exclusivement pour les finalités suivantes:</p>
+        <div class="container">
+            <p>Top-Paris-Sportifs.com accorde une importance primordiale à la
+                protection de votre vie privée et au respect de vos données
+                personnelles. Cette politique de confidentialité détaille nos
+                pratiques en matière de collecte, d'utilisation et de protection
+                de vos informations, en conformité avec le Règlement Général sur
+                la Protection des Données (RGPD) et la législation française
+                applicable.</p>
 
-        <h3>3.1 Fourniture et Amélioration du Service</h3>
-        <ul>
-            <li>Assurer le fonctionnement technique optimal du site</li>
-            <li>Adapter l'affichage à votre appareil et navigateur</li>
-            <li>Mémoriser vos préférences de navigation</li>
-            <li>Améliorer l'ergonomie et l'expérience utilisateur</li>
-        </ul>
+            <h2>1. Identité du Responsable de Traitement</h2>
+            <p>Le responsable du traitement des données personnelles collectées
+                sur Top-Paris-Sportifs.com est:</p>
+            <p><strong>Nom du site:</strong> Top-Paris-Sportifs.com<br>
+                <strong>Contact:</strong> privacy@top-paris-sportifs.com</p>
+            <p>Pour toute question relative à cette politique ou à vos données
+                personnelles, vous pouvez nous contacter à l'adresse email
+                ci-dessus.</p>
 
-        <h3>3.2 Analyse et Statistiques</h3>
-        <ul>
-            <li>Mesurer l'audience du site et analyser le trafic</li>
-            <li>Identifier les contenus les plus consultés</li>
-            <li>Comprendre le parcours des visiteurs</li>
-            <li>Optimiser notre contenu en fonction des intérêts des utilisateurs</li>
-        </ul>
+            <h2>2. Nature des Données Collectées</h2>
+            <p>Top-Paris-Sportifs.com étant un site comparateur indépendant,
+                nous ne collectons que des données limitées nécessaires au
+                fonctionnement du site.</p>
 
-        <h3>3.3 Sécurité et Prévention de la Fraude</h3>
-        <ul>
-            <li>Protéger le site contre les attaques informatiques</li>
-            <li>Détecter et prévenir les activités frauduleuses</li>
-            <li>Identifier les comportements suspects ou malveillants</li>
-        </ul>
-
-        <h3>3.4 Obligations Légales</h3>
-        <ul>
-            <li>Respecter la réglementation sur la vérification d'âge</li>
-            <li>Conserver les logs de connexion pour des raisons légales</li>
-            <li>Répondre aux demandes des autorités compétentes si requis</li>
-        </ul>
-
-        <h2>4. Base Légale du Traitement</h2>
-        <p>Le traitement de vos données personnelles repose sur les bases légales suivantes:</p>
-        <ul>
-            <li><strong>Consentement:</strong> Pour les cookies non essentiels (analytiques), nous recueillons votre consentement via la bannière cookies</li>
-            <li><strong>Intérêt légitime:</strong> Pour les statistiques anonymisées et l'amélioration de nos services</li>
-            <li><strong>Obligation légale:</strong> Pour la vérification d'âge et la conservation des logs</li>
-        </ul>
-
-        <h2>5. Destinataires des Données</h2>
-        <p>Vos données peuvent être partagées avec les catégories de destinataires suivants, dans la stricte limite nécessaire:</p>
-
-        <h3>5.1 Prestataires Techniques</h3>
-        <ul>
-            <li><strong>Hébergeur web:</strong> Pour le stockage et la disponibilité du site</li>
-            <li><strong>Services d'analyse:</strong> Google Analytics pour les statistiques d'audience (données anonymisées)</li>
-            <li><strong>CDN (Content Delivery Network):</strong> Pour optimiser la vitesse de chargement</li>
-        </ul>
-
-        <h3>5.2 Partenaires d'Affiliation</h3>
-        <p>Lorsque vous cliquez sur un lien vers un opérateur de paris partenaire:</p>
-        <ul>
-            <li>L'opérateur peut identifier que vous venez de notre site (via l'URL de référence)</li>
-            <li>Nous recevons une notification de votre clic (sans données personnelles identifiantes)</li>
-            <li>Si vous vous inscrivez, nous pouvons recevoir une confirmation (sans détails de votre compte)</li>
-        </ul>
-        <p><strong>Attention:</strong> Une fois sur le site de l'opérateur, vous êtes soumis à leur propre politique de confidentialité. Nous vous encourageons à la consulter avant de fournir des informations personnelles.</p>
-
-        <h3>5.3 Autorités Publiques</h3>
-        <p>En cas d'obligation légale, nous pouvons être amenés à communiquer certaines données aux autorités compétentes (police, justice, ANJ, etc.).</p>
-
-        <div class="info-highlight">
-            <p><strong>🔒 Engagement de confidentialité:</strong> Nous ne vendons, ne louons et ne partageons jamais vos données à des fins commerciales ou marketing avec des tiers non autorisés.</p>
-        </div>
-
-        <h2>6. Durée de Conservation</h2>
-        <p>Nous conservons vos données uniquement pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées:</p>
-        <ul>
-            <li><strong>Cookies de session:</strong> Supprimés à la fermeture du navigateur</li>
-            <li><strong>Cookies persistants:</strong> Maximum 13 mois</li>
-            <li><strong>Données analytiques:</strong> 26 mois conformément aux recommandations de la CNIL</li>
-            <li><strong>Logs de sécurité:</strong> 12 mois</li>
-            <li><strong>Consentement cookies:</strong> 6 mois avant nouvelle demande</li>
-        </ul>
-
-        <h2>7. Vos Droits sur vos Données</h2>
-        <p>Conformément au RGPD, vous bénéficiez des droits suivants concernant vos données personnelles:</p>
-
-        <h3>7.1 Droit d'Accès</h3>
-        <p>Vous avez le droit d'obtenir la confirmation que des données vous concernant sont ou ne sont pas traitées et, si c'est le cas, d'accéder à ces données et d'en obtenir une copie.</p>
-
-        <h3>7.2 Droit de Rectification</h3>
-        <p>Si des données vous concernant sont inexactes ou incomplètes, vous pouvez demander leur rectification.</p>
-
-        <h3>7.3 Droit à l'Effacement ("Droit à l'Oubli")</h3>
-        <p>Dans certaines conditions, vous pouvez demander l'effacement de vos données personnelles.</p>
-
-        <h3>7.4 Droit à la Limitation du Traitement</h3>
-        <p>Vous pouvez demander la limitation du traitement de vos données dans certains cas spécifiques.</p>
-
-        <h3>7.5 Droit à la Portabilité</h3>
-        <p>Vous avez le droit de recevoir vos données dans un format structuré, couramment utilisé et lisible par machine, et de les transmettre à un autre responsable de traitement.</p>
-
-        <h3>7.6 Droit d'Opposition</h3>
-        <p>Vous pouvez vous opposer à tout moment au traitement de vos données pour des raisons tenant à votre situation particulière.</p>
-
-        <h3>7.7 Droit de Retirer votre Consentement</h3>
-        <p>Lorsque le traitement repose sur votre consentement, vous pouvez le retirer à tout moment. Le retrait n'affecte pas la licéité du traitement effectué avant ce retrait.</p>
-
-        <h3>Comment Exercer vos Droits</h3>
-        <p>Pour exercer l'un de ces droits, contactez-nous à: <strong>privacy@top-paris-sportifs.com</strong></p>
-        <p>Nous vous répondrons dans un délai maximum de 30 jours. Pour des raisons de sécurité, nous pouvons vous demander de justifier votre identité.</p>
-
-        <h2>8. Gestion des Cookies</h2>
-        <h3>8.1 Configuration via le Site</h3>
-        <p>Lors de votre première visite, une bannière vous informe de l'utilisation de cookies et vous permet d'accepter ou de refuser les cookies non essentiels.</p>
-
-        <h3>8.2 Configuration via votre Navigateur</h3>
-        <p>Vous pouvez également gérer les cookies directement depuis les paramètres de votre navigateur:</p>
-        <ul>
-            <li><strong>Google Chrome:</strong> Paramètres > Confidentialité et sécurité > Cookies</li>
-            <li><strong>Firefox:</strong> Paramètres > Vie privée et sécurité > Cookies</li>
-            <li><strong>Safari:</strong> Préférences > Confidentialité > Cookies</li>
-            <li><strong>Edge:</strong> Paramètres > Cookies et autorisations du site</li>
-        </ul>
-
-        <h3>8.3 Opposition à Google Analytics</h3>
-        <p>Pour désactiver spécifiquement le suivi Google Analytics, vous pouvez installer le module complémentaire de navigateur disponible sur: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener" style="color: #8b4513;">https://tools.google.com/dlpage/gaoptout</a></p>
-
-        <div class="info-highlight">
-            <p><strong>⚠️ Note:</strong> Le blocage de tous les cookies peut affecter certaines fonctionnalités du site. Les cookies essentiels restent nécessaires pour le bon fonctionnement de base.</p>
-        </div>
-
-        <h2>9. Sécurité des Données</h2>
-        <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre:</p>
-        <ul>
-            <li>L'accès non autorisé</li>
-            <li>La divulgation accidentelle ou illégale</li>
-            <li>La perte ou la destruction</li>
-            <li>L'altération ou la modification</li>
-        </ul>
-
-        <h3>Mesures de Sécurité Mises en Place</h3>
-        <ul>
-            <li><strong>Chiffrement SSL/TLS:</strong> Toutes les communications sont chiffrées (HTTPS)</li>
-            <li><strong>Serveurs sécurisés:</strong> Hébergement dans des datacenters certifiés</li>
-            <li><strong>Pare-feu et protection anti-DDoS:</strong> Protection contre les attaques</li>
-            <li><strong>Accès restreint:</strong> Seules les personnes habilitées ont accès aux données</li>
-            <li><strong>Mises à jour régulières:</strong> Patches de sécurité appliqués systématiquement</li>
-            <li><strong>Sauvegardes régulières:</strong> Pour prévenir la perte de données</li>
-        </ul>
-
-        <h2>10. Transferts Internationaux de Données</h2>
-        <p>Certains de nos prestataires de services (comme Google Analytics) peuvent être situés en dehors de l'Union Européenne. Dans ce cas:</p>
-        <ul>
-            <li>Nous nous assurons que des garanties appropriées sont mises en place</li>
-            <li>Les transferts sont encadrés par les clauses contractuelles types approuvées par la Commission Européenne</li>
-            <li>Les prestataires s'engagent à respecter un niveau de protection équivalent au RGPD</li>
-        </ul>
-
-        <h2>11. Sites Tiers et Liens Externes</h2>
-        <p>Top-Paris-Sportifs.com contient des liens vers des sites web externes (opérateurs de paris, organismes d'aide, etc.). Cette politique de confidentialité ne s'applique qu'à notre site.</p>
-        <p>Nous ne sommes pas responsables des pratiques de confidentialité des sites tiers. Nous vous recommandons vivement de consulter leurs politiques respectives avant de leur fournir des informations personnelles.</p>
-
-        <h3>Programme d'Affiliation - Transparence</h3>
-        <p>Concernant nos liens d'affiliation:</p>
-        <ul>
-            <li>Nous pouvons recevoir une commission si vous vous inscrivez via nos liens</li>
-            <li>Cette commission n'entraîne aucun coût supplémentaire pour vous</li>
-            <li>Les opérateurs peuvent utiliser des cookies pour tracker votre provenance</li>
-            <li>Vos données personnelles saisies sur leur site sont régies par leur politique, pas la nôtre</li>
-        </ul>
-
-        <h2>12. Protection des Mineurs</h2>
-        <p>Notre site est strictement réservé aux personnes de 18 ans et plus. Nous ne collectons pas sciemment de données auprès de mineurs. Si nous découvrons qu'un mineur nous a fourni des informations, nous les supprimerons immédiatement de nos systèmes.</p>
-        <p>Si vous êtes parent ou tuteur et que vous pensez que votre enfant nous a fourni des données, contactez-nous immédiatement.</p>
-
-        <h2>13. Modifications de la Politique</h2>
-        <p>Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment pour refléter:</p>
-        <ul>
-            <li>Les évolutions réglementaires</li>
-            <li>Les changements dans nos pratiques</li>
-            <li>L'ajout de nouvelles fonctionnalités</li>
-        </ul>
-        <p>Toute modification substantielle fera l'objet d'une notification sur le site. La date de "dernière mise à jour" en haut de cette page sera actualisée. Nous vous encourageons à consulter régulièrement cette page.</p>
-
-        <h2>14. Réclamations et Recours</h2>
-        <p>Si vous estimez que vos droits n'ont pas été respectés ou que nous ne traitons pas vos données conformément à la réglementation, vous disposez de plusieurs recours:</p>
-
-        <h3>14.1 Contact Direct</h3>
-        <p>Contactez d'abord notre responsable de la protection des données: privacy@top-paris-sportifs.com</p>
-
-        <h3>14.2 Réclamation auprès de la CNIL</h3>
-        <p>Vous avez le droit de déposer une plainte auprès de l'autorité de contrôle française:</p>
-        <p><strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong><br>
-        Adresse: 3 Place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX 07<br>
-        Téléphone: 01 53 73 22 22<br>
-        Site web: <a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color: #8b4513;">www.cnil.fr</a></p>
-
-        <h2>15. Données de Contact</h2>
-        <p>Pour toute question, demande d'information ou exercice de vos droits concernant vos données personnelles:</p>
-        <p><strong>Email:</strong> privacy@top-paris-sportifs.com<br>
-        <strong>Objet du message:</strong> Précisez "Protection des données personnelles"<br>
-        <strong>Délai de réponse:</strong> Maximum 30 jours (1 mois)</p>
-
-        <div style="margin-top: 40px; padding: 30px; background: #f9f6f2; border-left: 5px solid #8b4513; border-radius: 8px;">
-            <h3 style="color: #8b4513; margin-bottom: 15px;">📋 En Résumé</h3>
-            <p style="margin-bottom: 10px; color: #6b3410;"><strong>Ce que vous devez retenir:</strong></p>
-            <ul style="margin-top: 10px; color: #6b3410;">
-                <li>Nous collectons très peu de données, uniquement techniques et anonymisées</li>
-                <li>Nous n'utilisons pas vos données à des fins commerciales non autorisées</li>
-                <li>Vous contrôlez vos données et pouvez exercer vos droits à tout moment</li>
-                <li>Nous ne collectons JAMAIS d'informations bancaires ou d'identification directe</li>
-                <li>La sécurité de vos données est notre priorité</li>
+            <h3>2.1 Données de Navigation Automatiques</h3>
+            <p>Lors de votre visite sur notre site, certaines informations
+                techniques sont collectées automatiquement:</p>
+            <ul>
+                <li><strong>Adresse IP:</strong> Collectée de manière anonymisée
+                    pour des raisons de sécurité et statistiques</li>
+                <li><strong>Informations sur le navigateur:</strong> Type,
+                    version et langue du navigateur utilisé</li>
+                <li><strong>Système d'exploitation:</strong> Type et version de
+                    votre système</li>
+                <li><strong>Pages consultées:</strong> URL des pages visitées et
+                    ordre de navigation</li>
+                <li><strong>Durée de visite:</strong> Temps passé sur chaque
+                    page et sur le site</li>
+                <li><strong>Données de référencement:</strong> Site ou moteur de
+                    recherche depuis lequel vous êtes arrivé</li>
+                <li><strong>Localisation géographique:</strong> Pays et région
+                    approximatifs (sans précision d'adresse)</li>
             </ul>
-        </div>
-    </div>
 
-    <footer>
-        <p>© 2025 Top-Paris-Sportifs.com - Réservé aux 18+</p>
-        <p style="margin-top: 10px;">
-            <a href="index.html">Accueil</a> | 
-            <a href="jeu-responsable.html">Jeu Responsable</a> | 
-            <a href="conditions.html">Conditions</a> | 
-            <a href="avertissement.html">Avertissement</a>
-        </p>
-    </footer>
-</body>
+            <h3>2.2 Cookies et Technologies Similaires</h3>
+            <p>Nous utilisons différents types de cookies pour améliorer votre
+                expérience:</p>
+            <ul>
+                <li><strong>Cookies strictement nécessaires:</strong> Essentiels
+                    au fonctionnement du site (vérification d'âge, préférences
+                    de navigation)</li>
+                <li><strong>Cookies analytiques:</strong> Nous aident à
+                    comprendre comment les visiteurs utilisent le site (Google
+                    Analytics)</li>
+                <li><strong>Cookies de performance:</strong> Permettent
+                    d'améliorer les fonctionnalités du site</li>
+            </ul>
+
+            <div class="info-highlight">
+                <p><strong>📌 Important:</strong> Top-Paris-Sportifs.com ne
+                    collecte AUCUNE donnée personnelle sensible. Nous ne
+                    demandons jamais de nom, prénom, adresse postale, numéro de
+                    téléphone, informations bancaires ou toute autre donnée
+                    d'identification directe. Vous n'avez pas besoin de créer de
+                    compte pour utiliser notre site.</p>
+            </div>
+
+            <h2>3. Finalités du Traitement</h2>
+            <p>Les données collectées sont utilisées exclusivement pour les
+                finalités suivantes:</p>
+
+            <h3>3.1 Fourniture et Amélioration du Service</h3>
+            <ul>
+                <li>Assurer le fonctionnement technique optimal du site</li>
+                <li>Adapter l'affichage à votre appareil et navigateur</li>
+                <li>Mémoriser vos préférences de navigation</li>
+                <li>Améliorer l'ergonomie et l'expérience utilisateur</li>
+            </ul>
+
+            <h3>3.2 Analyse et Statistiques</h3>
+            <ul>
+                <li>Mesurer l'audience du site et analyser le trafic</li>
+                <li>Identifier les contenus les plus consultés</li>
+                <li>Comprendre le parcours des visiteurs</li>
+                <li>Optimiser notre contenu en fonction des intérêts des
+                    utilisateurs</li>
+            </ul>
+
+            <h3>3.3 Sécurité et Prévention de la Fraude</h3>
+            <ul>
+                <li>Protéger le site contre les attaques informatiques</li>
+                <li>Détecter et prévenir les activités frauduleuses</li>
+                <li>Identifier les comportements suspects ou malveillants</li>
+            </ul>
+
+            <h3>3.4 Obligations Légales</h3>
+            <ul>
+                <li>Respecter la réglementation sur la vérification d'âge</li>
+                <li>Conserver les logs de connexion pour des raisons
+                    légales</li>
+                <li>Répondre aux demandes des autorités compétentes si
+                    requis</li>
+            </ul>
+
+            <h2>4. Base Légale du Traitement</h2>
+            <p>Le traitement de vos données personnelles repose sur les bases
+                légales suivantes:</p>
+            <ul>
+                <li><strong>Consentement:</strong> Pour les cookies non
+                    essentiels (analytiques), nous recueillons votre
+                    consentement via la bannière cookies</li>
+                <li><strong>Intérêt légitime:</strong> Pour les statistiques
+                    anonymisées et l'amélioration de nos services</li>
+                <li><strong>Obligation légale:</strong> Pour la vérification
+                    d'âge et la conservation des logs</li>
+            </ul>
+
+            <h2>5. Destinataires des Données</h2>
+            <p>Vos données peuvent être partagées avec les catégories de
+                destinataires suivants, dans la stricte limite nécessaire:</p>
+
+            <h3>5.1 Prestataires Techniques</h3>
+            <ul>
+                <li><strong>Hébergeur web:</strong> Pour le stockage et la
+                    disponibilité du site</li>
+                <li><strong>Services d'analyse:</strong> Google Analytics pour
+                    les statistiques d'audience (données anonymisées)</li>
+                <li><strong>CDN (Content Delivery Network):</strong> Pour
+                    optimiser la vitesse de chargement</li>
+            </ul>
+
+            <h3>5.2 Partenaires d'Affiliation</h3>
+            <p>Lorsque vous cliquez sur un lien vers un opérateur de paris
+                partenaire:</p>
+            <ul>
+                <li>L'opérateur peut identifier que vous venez de notre site
+                    (via l'URL de référence)</li>
+                <li>Nous recevons une notification de votre clic (sans données
+                    personnelles identifiantes)</li>
+                <li>Si vous vous inscrivez, nous pouvons recevoir une
+                    confirmation (sans détails de votre compte)</li>
+            </ul>
+            <p><strong>Attention:</strong> Une fois sur le site de l'opérateur,
+                vous êtes soumis à leur propre politique de confidentialité.
+                Nous vous encourageons à la consulter avant de fournir des
+                informations personnelles.</p>
+
+            <h3>5.3 Autorités Publiques</h3>
+            <p>En cas d'obligation légale, nous pouvons être amenés à
+                communiquer certaines données aux autorités compétentes (police,
+                justice, ANJ, etc.).</p>
+
+            <div class="info-highlight">
+                <p><strong>🔒 Engagement de confidentialité:</strong> Nous ne
+                    vendons, ne louons et ne partageons jamais vos données à des
+                    fins commerciales ou marketing avec des tiers non
+                    autorisés.</p>
+            </div>
+
+            <h2>6. Durée de Conservation</h2>
+            <p>Nous conservons vos données uniquement pendant la durée
+                nécessaire aux finalités pour lesquelles elles ont été
+                collectées:</p>
+            <ul>
+                <li><strong>Cookies de session:</strong> Supprimés à la
+                    fermeture du navigateur</li>
+                <li><strong>Cookies persistants:</strong> Maximum 13 mois</li>
+                <li><strong>Données analytiques:</strong> 26 mois conformément
+                    aux recommandations de la CNIL</li>
+                <li><strong>Logs de sécurité:</strong> 12 mois</li>
+                <li><strong>Consentement cookies:</strong> 6 mois avant nouvelle
+                    demande</li>
+            </ul>
+
+            <h2>7. Vos Droits sur vos Données</h2>
+            <p>Conformément au RGPD, vous bénéficiez des droits suivants
+                concernant vos données personnelles:</p>
+
+            <h3>7.1 Droit d'Accès</h3>
+            <p>Vous avez le droit d'obtenir la confirmation que des données vous
+                concernant sont ou ne sont pas traitées et, si c'est le cas,
+                d'accéder à ces données et d'en obtenir une copie.</p>
+
+            <h3>7.2 Droit de Rectification</h3>
+            <p>Si des données vous concernant sont inexactes ou incomplètes,
+                vous pouvez demander leur rectification.</p>
+
+            <h3>7.3 Droit à l'Effacement ("Droit à l'Oubli")</h3>
+            <p>Dans certaines conditions, vous pouvez demander l'effacement de
+                vos données personnelles.</p>
+
+            <h3>7.4 Droit à la Limitation du Traitement</h3>
+            <p>Vous pouvez demander la limitation du traitement de vos données
+                dans certains cas spécifiques.</p>
+
+            <h3>7.5 Droit à la Portabilité</h3>
+            <p>Vous avez le droit de recevoir vos données dans un format
+                structuré, couramment utilisé et lisible par machine, et de les
+                transmettre à un autre responsable de traitement.</p>
+
+            <h3>7.6 Droit d'Opposition</h3>
+            <p>Vous pouvez vous opposer à tout moment au traitement de vos
+                données pour des raisons tenant à votre situation
+                particulière.</p>
+
+            <h3>7.7 Droit de Retirer votre Consentement</h3>
+            <p>Lorsque le traitement repose sur votre consentement, vous pouvez
+                le retirer à tout moment. Le retrait n'affecte pas la licéité du
+                traitement effectué avant ce retrait.</p>
+
+            <h3>Comment Exercer vos Droits</h3>
+            <p>Pour exercer l'un de ces droits, contactez-nous à:
+                <strong>privacy@top-paris-sportifs.com</strong></p>
+            <p>Nous vous répondrons dans un délai maximum de 30 jours. Pour des
+                raisons de sécurité, nous pouvons vous demander de justifier
+                votre identité.</p>
+
+            <h2>8. Gestion des Cookies</h2>
+            <h3>8.1 Configuration via le Site</h3>
+            <p>Lors de votre première visite, une bannière vous informe de
+                l'utilisation de cookies et vous permet d'accepter ou de refuser
+                les cookies non essentiels.</p>
+
+            <h3>8.2 Configuration via votre Navigateur</h3>
+            <p>Vous pouvez également gérer les cookies directement depuis les
+                paramètres de votre navigateur:</p>
+            <ul>
+                <li><strong>Google Chrome:</strong> Paramètres > Confidentialité
+                    et sécurité > Cookies</li>
+                <li><strong>Firefox:</strong> Paramètres > Vie privée et
+                    sécurité > Cookies</li>
+                <li><strong>Safari:</strong> Préférences > Confidentialité >
+                    Cookies</li>
+                <li><strong>Edge:</strong> Paramètres > Cookies et autorisations
+                    du site</li>
+            </ul>
+
+            <h3>8.3 Opposition à Google Analytics</h3>
+            <p>Pour désactiver spécifiquement le suivi Google Analytics, vous
+                pouvez installer le module complémentaire de navigateur
+                disponible sur: <a
+                    href="https://tools.google.com/dlpage/gaoptout"
+                    target="_blank" rel="noopener"
+                    style="color: #8b4513;">https://tools.google.com/dlpage/gaoptout</a></p>
+
+            <div class="info-highlight">
+                <p><strong>⚠️ Note:</strong> Le blocage de tous les cookies peut
+                    affecter certaines fonctionnalités du site. Les cookies
+                    essentiels restent nécessaires pour le bon fonctionnement de
+                    base.</p>
+            </div>
+
+            <h2>9. Sécurité des Données</h2>
+            <p>Nous mettons en œuvre des mesures techniques et
+                organisationnelles appropriées pour protéger vos données
+                contre:</p>
+            <ul>
+                <li>L'accès non autorisé</li>
+                <li>La divulgation accidentelle ou illégale</li>
+                <li>La perte ou la destruction</li>
+                <li>L'altération ou la modification</li>
+            </ul>
+
+            <h3>Mesures de Sécurité Mises en Place</h3>
+            <ul>
+                <li><strong>Chiffrement SSL/TLS:</strong> Toutes les
+                    communications sont chiffrées (HTTPS)</li>
+                <li><strong>Serveurs sécurisés:</strong> Hébergement dans des
+                    datacenters certifiés</li>
+                <li><strong>Pare-feu et protection anti-DDoS:</strong>
+                    Protection contre les attaques</li>
+                <li><strong>Accès restreint:</strong> Seules les personnes
+                    habilitées ont accès aux données</li>
+                <li><strong>Mises à jour régulières:</strong> Patches de
+                    sécurité appliqués systématiquement</li>
+                <li><strong>Sauvegardes régulières:</strong> Pour prévenir la
+                    perte de données</li>
+            </ul>
+
+            <h2>10. Transferts Internationaux de Données</h2>
+            <p>Certains de nos prestataires de services (comme Google Analytics)
+                peuvent être situés en dehors de l'Union Européenne. Dans ce
+                cas:</p>
+            <ul>
+                <li>Nous nous assurons que des garanties appropriées sont mises
+                    en place</li>
+                <li>Les transferts sont encadrés par les clauses contractuelles
+                    types approuvées par la Commission Européenne</li>
+                <li>Les prestataires s'engagent à respecter un niveau de
+                    protection équivalent au RGPD</li>
+            </ul>
+
+            <h2>11. Sites Tiers et Liens Externes</h2>
+            <p>Top-Paris-Sportifs.com contient des liens vers des sites web
+                externes (opérateurs de paris, organismes d'aide, etc.). Cette
+                politique de confidentialité ne s'applique qu'à notre site.</p>
+            <p>Nous ne sommes pas responsables des pratiques de confidentialité
+                des sites tiers. Nous vous recommandons vivement de consulter
+                leurs politiques respectives avant de leur fournir des
+                informations personnelles.</p>
+
+            <h3>Programme d'Affiliation - Transparence</h3>
+            <p>Concernant nos liens d'affiliation:</p>
+            <ul>
+                <li>Nous pouvons recevoir une commission si vous vous inscrivez
+                    via nos liens</li>
+                <li>Cette commission n'entraîne aucun coût supplémentaire pour
+                    vous</li>
+                <li>Les opérateurs peuvent utiliser des cookies pour tracker
+                    votre provenance</li>
+                <li>Vos données personnelles saisies sur leur site sont régies
+                    par leur politique, pas la nôtre</li>
+            </ul>
+
+            <h2>12. Protection des Mineurs</h2>
+            <p>Notre site est strictement réservé aux personnes de 18 ans et
+                plus. Nous ne collectons pas sciemment de données auprès de
+                mineurs. Si nous découvrons qu'un mineur nous a fourni des
+                informations, nous les supprimerons immédiatement de nos
+                systèmes.</p>
+            <p>Si vous êtes parent ou tuteur et que vous pensez que votre enfant
+                nous a fourni des données, contactez-nous immédiatement.</p>
+
+            <h2>13. Modifications de la Politique</h2>
+            <p>Nous nous réservons le droit de modifier cette politique de
+                confidentialité à tout moment pour refléter:</p>
+            <ul>
+                <li>Les évolutions réglementaires</li>
+                <li>Les changements dans nos pratiques</li>
+                <li>L'ajout de nouvelles fonctionnalités</li>
+            </ul>
+            <p>Toute modification substantielle fera l'objet d'une notification
+                sur le site. La date de "dernière mise à jour" en haut de cette
+                page sera actualisée. Nous vous encourageons à consulter
+                régulièrement cette page.</p>
+
+            <h2>14. Réclamations et Recours</h2>
+            <p>Si vous estimez que vos droits n'ont pas été respectés ou que
+                nous ne traitons pas vos données conformément à la
+                réglementation, vous disposez de plusieurs recours:</p>
+
+            <h3>14.1 Contact Direct</h3>
+            <p>Contactez d'abord notre responsable de la protection des données:
+                privacy@top-paris-sportifs.com</p>
+
+            <h3>14.2 Réclamation auprès de la CNIL</h3>
+            <p>Vous avez le droit de déposer une plainte auprès de l'autorité de
+                contrôle française:</p>
+            <p><strong>Commission Nationale de l'Informatique et des Libertés
+                    (CNIL)</strong><br>
+                Adresse: 3 Place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX
+                07<br>
+                Téléphone: 01 53 73 22 22<br>
+                Site web: <a href="https://www.cnil.fr" target="_blank"
+                    rel="noopener" style="color: #8b4513;">www.cnil.fr</a></p>
+
+            <h2>15. Données de Contact</h2>
+            <p>Pour toute question, demande d'information ou exercice de vos
+                droits concernant vos données personnelles:</p>
+            <p><strong>Email:</strong> privacy@top-paris-sportifs.com<br>
+                <strong>Objet du message:</strong> Précisez
+                "Protection des données personnelles"<br>
+                <strong>Délai de réponse:</strong> Maximum 30 jours (1 mois)</p>
+
+            <div
+                style="margin-top: 40px; padding: 30px; background: #f9f6f2; border-left: 5px solid #8b4513; border-radius: 8px;">
+                <h3 style="color: #8b4513; margin-bottom: 15px;">📋 En
+                    Résumé</h3>
+                <p style="margin-bottom: 10px; color: #6b3410;"><strong>Ce que
+                        vous devez retenir:</strong></p>
+                <ul style="margin-top: 10px; color: #6b3410;">
+                    <li>Nous collectons très peu de données, uniquement
+                        techniques et anonymisées</li>
+                    <li>Nous n'utilisons pas vos données à des fins commerciales
+                        non autorisées</li>
+                    <li>Vous contrôlez vos données et pouvez exercer vos droits
+                        à tout moment</li>
+                    <li>Nous ne collectons JAMAIS d'informations bancaires ou
+                        d'identification directe</li>
+                    <li>La sécurité de vos données est notre priorité</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer-logos">
+
+                    <div class="footer-logo" style="background:#fff;"><img
+                            style="max-width: 150px; border-radius: 50%; max-width: 50px;"
+                            src="./images/brand/18+ logo.png" alt="brand"></div>
+                </div>
+                <p style="color: #b8c9d9; margin-top: 15px; font-size: 14px;">Le
+                    Le jeu doit toujours rester un loisir et une source de
+                    divertissement.
+                    Si vous sentez que les jeux d'argent prennent trop de place
+                    dans votre quotidien, il est important d'agir rapidement.
+                    Le jeu excessif peut avoir des conséquences sérieuses sur
+                    votre santé mentale, vos finances et vos relations
+                    personnelles.
+
+                    Si vous ou un proche êtes concernés par une dépendance au
+                    jeu, n'attendez pas pour demander de l'aide.
+                    Des professionnels spécialisés dans le soutien aux joueurs
+                    en difficulté sont disponibles pour vous accompagner de
+                    manière confidentielle et bienveillante.</p>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="jeu-responsable.html">Jeu
+                                Responsable</a></li>
+                        <li><a href="conditions.html">Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a
+                                href="politique-confidentialite.html">Confidentialité</a></li>
+                        <li><a href="avertissement.html">Avertissement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aide</h4>
+                    <ul>
+                        <li><a href="https://www.joueurs-info-service.fr"
+                                target="_blank">Joueurs Info Service</a></li>
+                        <li><a href="https://www.anj.fr"
+                                target="_blank">ANJ</a></li>
+                        <li><a href="https://www.sosjoueurs.org"
+                                target="_blank">SOS Joueurs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Partenaires</h4>
+                    <div class="footer-logos-vertical">
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://www.joueurs-info-service.fr/"
+                                target="_blank">
+                                <img src="./images/brand/joueurs-info-logo.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://anj.fr/" target="_blank">
+                                <img src="./images/brand/anj-logo.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                        <div class="footer-logo"
+                            style="background:#fff; margin-bottom: 15px;">
+                            <a href="https://www.gamcare.org.uk/"
+                                target="_blank">
+                                <img style="max-width: 150px;"
+                                    src="./images/brand/gam-care.png"
+                                    alt="brand">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Top-Paris-Sportifs.com - 18+</p>
+            </div>
+        </footer>
+    </body>
 </html>
